@@ -1,0 +1,268 @@
+
+/* ------------------------For Tablet view --------------------------------*/
+
+@media (max-width: 1025px){
+    #latest-notification-container #notification-box{
+        height: auto;
+    }
+    #latest-notification-container #notification-box .box-content section a{
+        font-size: 1.1rem;
+    }
+    #announcement_event #announcement_event_container{
+        width: 100%;
+        height: 43vh;
+    }
+    #announcement_event_container #announcement-box #announcement-content {
+        height: 28vh;
+    }
+
+    #event-box{
+        height: 43vh;
+    }
+    #event-box  #event-content{
+        height: 28vh;
+    }
+    #welcome-box #welcome-box-container #box-content .welcome-box-chairman-img{
+        width: 20%;
+        margin: auto;
+    }
+
+    #welcome-box #welcome-box-container #box-content .welcome-note{
+        width: 80%;
+        padding:10px;
+        align-items: flex-start;
+        margin: auto;
+    }
+
+    #reservation-box #reservation-box-container{
+        width: 90%;
+    }
+    #facilities-sec-container #facilities-content .facilities-box .box-img img{
+        height: auto;
+    }
+    #contact-us-sec-container #contact-us-content{
+        gap: 10px;
+        
+    }
+    #contact-us-sec-container #contact-us-content #contact-details p{
+        font-size: 1.1rem;
+    }
+    #contact-us-sec-container #contact-us-content #contact-details .contact-address{
+        font-size: 1.3rem;
+    }
+    #contact-us-sec-container #contact-us-content #contact-details #contact-form-btn{
+        font-size: 1.1rem;
+    }
+
+
+
+
+
+}
+
+
+
+@media (max-width:479px) {
+    
+    header{
+        /* display: none; */
+    }
+
+    #top-1 #head-tagline p{
+        font-size: 0.8rem;
+    }
+    #top-1 #social-icons-top a i{
+        font-size: 0.9rem;
+    }
+
+
+
+    #latest-notification-container #notification-box .box-content section a{
+        font-size: 0.8rem;
+    }
+    #latest-notification-container #notification-box .box-content section{
+        width: 450%;
+    }
+    #latest-notification-container #notification-box .box-title{
+        font-size: 0.55rem;
+    }
+    #latest-notification-container{
+        width: 95%;
+    }
+
+
+    #announcement_event #announcement_event_container{
+        flex-direction: column;
+    }
+    #announcement_event #announcement_event_container{
+        height: 50%;
+        width: 100%;
+    }
+    #announcement_event #announcement_event_container #announcement-box{
+        width: 90%;
+        height: 50vh;
+        margin: auto;
+    }
+
+    #announcement_event_container #announcement-box #announcement-content section>div a{
+        font-size: 0.9rem;
+    }
+
+    #event-box{
+        width:90%;
+        margin:auto;
+        margin-top: 2rem;
+        height: 60%;
+        
+    }
+
+    #event-box  #event-content{
+        /* height: 90vh; */
+    }
+    #event-box  #event-content #event .event-year{
+        font-size: 0.9rem;
+
+    }
+    #event-box  #event-content #event .event-date{
+        width:30%;
+    }
+
+    #event-box  #event-content #event #event-description p{
+        font-size: 0.8rem;
+    }
+
+
+
+
+
+
+
+    #welcome-box #welcome-box-container #box-content{
+         flex-direction: column-reverse;
+    }
+    #welcome-box #welcome-box-container #box-content .welcome-box-chairman-img{
+        width: 90%;
+    }
+    #welcome-box #welcome-box-container #box-content .welcome-note{
+        width: 100%;
+    }
+    #welcome-box #welcome-box-container #box-content .welcome-note p{
+        font-size:0.9rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #reservation-box #reservation-box-container{
+        flex-direction: column;
+    }
+
+    #reservation-box #reservation-box-container .reservation-content{
+        margin-bottom: 2rem;
+    }
+
+
+
+
+
+
+    #facilities-sec #facilities-sec-container #facilities-content{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+ 
+    }
+
+    /* #facilities-sec #facilities-sec-container #facilities-content .facilities-box{
+        font-size: 0.rem;
+    } */
+
+    #facilities-sec-container #facilities-content .facilities-box .facilities-title{
+        font-size: 0.9rem;
+    }
+
+    #facilities-sec #facilities-sec-container{
+        width: 90%;
+    }
+    #facilities-sec-container #facilities-content .facilities-box .facilities-title{
+        padding: 10px 5px;
+    }
+
+
+
+
+
+
+    #student-achievement-content .achievement-box .greeting-message{
+        font-size:1rem;
+    }
+    #student-achievement-content .achievement-box .Students-name{
+        font-size: 0.8rem;
+    }
+
+
+    #student-achievement-content .achievement-box .Students-batch{
+        font-size: 0.8rem;
+    }
+
+    #student-achievement-content .achievement-box .Students-placed-company{
+        font-size: 0.8rem;
+    }
+    #student-achievement-container #student-achievement-content{
+        width: 300%;
+        gap:1rem;
+    }
+
+    
+
+
+
+
+
+
+    #placement-partner-container #placement-partner-content .brand-list {
+        gap:1rem;
+        width: 300%;
+    }
+
+
+    #Ads-admission1{
+        margin: auto;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+
+
+    #contact-us-sec-container #contact-us-content{
+        flex-direction: column;
+    }
+
+    #contact-map-embed{
+        width: 100%;
+    }
+    #contact-map-embed iframe{
+        width: 100%;
+        height: 300px;
+    }
+
+
+
+
+
+
+   
+
+
+} 
+
+
+  

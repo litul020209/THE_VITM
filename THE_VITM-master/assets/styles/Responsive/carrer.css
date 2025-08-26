@@ -1,0 +1,17 @@
+@media(max-width:479px) {
+    #career-opportunity-container{
+      width: 90%;
+    } 
+    #career-opportunity-container #career-opportunity-btn button{
+        font-size: 0.9rem;
+    }
+    #career-opportunity-list .recruitment-box .recruitment-details .recruitment-role{
+        font-size:0.9rem;
+    }
+    #career-opportunity-list .recruitment-box .recruitment-details>div{
+        font-size:1rem;
+    }
+    #career-opportunity-list .recruitment-box .recruitment-details .recruitment-prospectus-file a{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="https://i.ibb.co/ZSggZM6/fav-icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/result.css">
+    <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../components/styles/header-footer.css">
+    <link rel="stylesheet" href="/components/styles/secondary-header.css">
+    <title>Result | THE VITM</title>
+</head>
+<body>
+
+
+    <div id="loader-section-main"></div>
+
+
+    <header style="position: relative"></header>
+
+
+    <div id="exam-type-section">
+        <label for="exam-type-select">Exam Type</label>
+        <select name="exam-type-select" id="exam-type-select">
+            <option value="">Select</option>
+            <option value="sem">Semester</option>
+            <option value="mid-sem">Mid-Semester</option>
+        </select>
+    </div>
+
+
+    <div id="mid-sem-result-container">
+        <div id="mid-sem-search-container">
+            <div id="mid-sem-search-sec">
+                <select name="select-academic-year" id="select-academic-year">
+                    <option value="">Select academic year</option>
+                   
+                    <option value="2024-2025">2024-25</option>
+                </select>
+                <select name="select-semester" id="select-semester">
+                    <option value="">Select Semester</option>
+                    <option value="1">1st Sem</option>
+                    <option value="2">2nd Sem</option>
+                    <option value="3">3rd Sem</option>
+                    <option value="4">4th Sem</option>
+                    <option value="5">5th Sem</option>
+                    <option value="6">6th Sem</option>
+                    <option value="7">7th Sem</option>
+                    
+                </select>
+                <select name="select-mid-semester" id="select-mid-semester">
+                    <option value="">Select Mid Semester</option>
+                    <option value="1">1st Mid Sem</option>
+                    <option value="2">2nd Mid Sem</option>
+                  
+                </select>
+    
+                <input type="text" id="reg-number" placeholder="Enter Reg Number">
+    
+                <p>OR</p>
+    
+                <input type="text" id="roll-number" placeholder="Enter Roll Number">
+
+                <button id="result-get-btn">Find</button>
+    
+            </div>
+        </div>
+        
+  
+
+        <div id="result-table-append-sec">
+            <!-- <h2>Your Result will be append here.</h2> -->
+
+            <!-- <div id="result-table-itselt">
+                <table>
+                    <thead class="table-heading">
+                        <th colspan="4">Student Details</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th colspan="1">Name</th>
+                            <td colspan="2">Binod</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">Reg</th>
+                            <td colspan="2">254125698</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">College Name</th>
+                            <td colspan="2">THE VITM</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">Branch</th>
+                            <td colspan="2">CSE</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">Semester</th>
+                            <td colspan="2">2nd Semester</td>
+                        </tr>
+                        <tr>
+                            <th colspan="1">Mid Semester</th>
+                            <td colspan="2">1st Mid Sem</td>
+                        </tr>
+                   
+
+                    
+                        <thead>
+                            <tr class="table-heading">
+                                <th scope="col">Subject</th>
+                                <th scope="col">Total Mark</th>
+                                <th scope="col">Secured Mark</th>
+                                
+                            </tr>
+                            
+                        </thead>
+                    
+                    
+                        <tr>
+                            <th scope="row">Mathematics-II</th>
+                            <td>30</td>
+                            <td>02</td>
+                            
+                        </tr>
+                        
+                   
+                    
+                        <tr>
+                            <th scope="row">Digital Logic Design</th>
+                            <td>30</td>
+                            <td>02</td>
+                           
+                        </tr>
+                        
+                    
+                    
+                        <tr>
+                            <th scope="row">Data Structure</th>
+                            <td>30</td>
+                            <td>02</td>
+                           
+                        </tr>
+                        
+                   
+                    
+                        <tr>
+                            <th scope="row">Environment Science</th>
+                            <td>30</td>
+                            <td>02</td>
+                            
+                        </tr>
+                        
+                    
+                   
+                        <tr>
+                            <th scope="row">Organisational Behaviour</th>
+                            <td>30</td>
+                            <td>02</td>
+                            
+                        </tr>
+                       
+                    
+                   
+                        <tr>
+                            <th scope="row">Object Oriented Programming Using JAVA</th>
+                            <td>30</td>
+                            <td>02</td>
+                           
+                        </tr>
+                        
+                        <tr>
+                            <th scope="row">Mathematics-II</th>
+                            <td>30</td>
+                            <td>02</td>
+                            
+                        </tr>
+
+                      
+                        <tr>
+                            <th scope="row"> Total</th>
+                            <th scope="row">180</th>
+                            <th scope="row">128</th>
+                        </tr>
+                        
+                    
+                       
+                    </tbody>
+                </table> 
+             </div> -->
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <footer></footer> -->
+
+
+</body>
+</html>
+
+<!-- <script src="../components/header-footer/header-footer.js"></script> -->
+<script src="/components/header-footer/header-footer.js"></script>
+<script src="../assets/scripts/result.js" type="module"></script>

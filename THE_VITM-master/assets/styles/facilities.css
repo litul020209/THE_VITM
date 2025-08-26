@@ -1,0 +1,294 @@
+@import url(/assets/styles/Responsive/facilities.css);
+:root{
+  --font-for-all-facility:"Roboto", sans-serif;
+  --bg-color-white:white;
+  --color-white:white;
+  --color-grey:grey;
+  --bg-color-black:black;
+  --color-black:black;
+  --color-page-primary:#e60000; 
+  --bg--color--blue: rgb(36, 3, 126);
+  --color--blue:blue;
+  --bg-color-white: #ffffff;
+  --color-black: #000;
+  --color-grey: rgba(0, 0, 0, 0.1);
+  
+  --color-white: #fff;
+  --bg--color--blue: #cce0ff;
+  --color--blue: #003399;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-for-all-facility);
+    
+ }
+
+      
+
+/* -------facilities---------- */
+
+/* campus---------------- */
+
+
+/* ------------facility lab content------------- */
+
+#lab-content-container{
+  width: 100%;
+  background-color: var(--color-grey);
+  overflow: hidden;
+  background-color: var(--bg-color-white);
+}
+
+#lab-content-container #lab-content{
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+}
+#lab-content-container #lab-content h1{
+  text-align: center;
+  margin: 2% 0%;
+  font-size: 3rem;
+  
+}
+#lab-content .row_01{
+  display: flex;
+  justify-content: space-between;
+  
+  gap: 30px;
+}
+#lab-content .row_01>div {
+  width: 30%;
+  border: 1px solid var(--color-black);
+  padding: 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+  box-shadow: 3px 5px 15px var(--color-grey);
+
+}
+#lab-content .row_01>div:hover{
+  box-shadow: 3px 5px 1px black;
+}
+
+#lab-content .row_01>div>.lab_box_img>img{
+  width: 100%;
+}
+
+#lab-content .row_01>div>div h2{
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: var(--color-page-primary);
+  color: white;
+}
+
+#lab-content .row_01>div>div p{
+  font-size: 1.3rem;
+  padding: 0px 10px ;
+  margin:10px 0px;
+}
+
+
+
+
+  
+/* ------------facility hostel content--------------- */
+
+/* ========== HOSTEL SECTIONS ========== */
+.hostel-section {
+  padding: 50px 20px;
+  background-color: #f5faff;
+}
+
+.alt-bg {
+  background-color: #e0ecff;
+}
+
+.hostel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hostel-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.hostel-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.hostel-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hostel-content h2 {
+  font-size: 32px;
+  color:#e60000;
+  margin-bottom: 15px;
+}
+
+.hostel-content p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+/*--------------------library----gym----canteen----------------- */
+
+#heading-for-other {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  background-color: var(--color-page-primary);
+  color: var(--color-white);
+}
+
+#heading-for-other h4 {
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+}
+
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cards_clg {
+  width: calc(33.33% - 20px);
+  height: 480px;
+  background-color: var(--bg-color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 5px;
+  box-shadow: 10px 15px 20px var(--color-grey);
+  transition: 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.cards_clg:hover {
+  transform: scale(1.02);
+}
+
+.cards_clg .image_clg img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cards_clg .title_clg {
+  text-align: center;
+  background-color: var(--color-page-primary);
+  color: var(--color-white);
+  padding: 10px;
+}
+
+.cards_clg .title_clg h2 {
+  margin: 0;
+}
+
+.cards_clg .desc_clg {
+  text-align: center;
+  padding: 15px;
+}
+
+.cards_clg .desc_clg p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.cards_clg .desc_clg button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--color-page-primary);
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.cards_clg .desc_clg button:hover {
+  background-color: var(--bg--color--blue);
+  color: var(--color--blue);
+}
+
+
+
+@media (max-width:479px) {
+  .cards_clg {
+    width: 100%;
+  }
+  .hostel-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hostel-container.reverse {
+    flex-direction: column;
+  }
+
+  .hostel-content h2 {
+    font-size: 28px;
+  }
+
+  .hostel-content p {
+    font-size: 16px;
+  }
+  
+    #lab-content-container #lab-content h1 {
+      font-size: 2rem;
+      margin: 5% 0%;
+    }
+  
+    #lab-content .row_01 {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  
+    #lab-content .row_01 > div {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    #lab-content .row_01 > div > div h2 {
+      font-size: 1.4rem;
+    }
+  
+    #lab-content .row_01 > div > div p {
+      font-size: 1.1rem;
+    }
+  }
+  
+
+
+
+
+/*-------footer------*/
+

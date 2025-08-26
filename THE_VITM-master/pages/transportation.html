@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Service</title>
+    <link rel="stylesheet" href="../components/styles/header-footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/tranportation.css">
+    <link rel="stylesheet" href="../components/styles/secondary-header.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/ZSggZM6/fav-icon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header style="position: relative;"></header>
+    <div id="loader-section-main"></div>
+    <!-- ---------heading primary -->
+    
+    <div id="box-primary-title">
+        <h1><i class="fa-solid fa-bus"></i> &nbsp;Bus Transportation Services </h1>
+    </div>
+
+
+    <div class="bus-search-container">
+        
+        <div class="grid-wrapper grid-col-auto">
+           <label for="radio-card-1" class="radio-card">
+              <input type="radio" name="bus-type-radio-card" value="Route" id="radio-card-1" />
+              <div class="card-content-wrapper">
+                 <span class="check-icon"></span>
+                 <div class="card-content">
+                    <img src="/assets/icons/busRoute.jpg" alt="" />
+                    <h4>Check Available Route</h4>
+                    <h5>Check for updated routes and Buses.</h5>
+                 </div>
+              </div>
+           </label>
+           <!-- /.radio-card -->
+     
+           <label for="radio-card-2" class="radio-card">
+              <input type="radio" name="bus-type-radio-card" value="Bus" id="radio-card-2" />
+              <div class="card-content-wrapper">
+                 <span class="check-icon"></span>
+                 <div class="card-content">
+                    <img src="/assets/icons/busSignal.jpg" alt="" />
+                    <h4>Track Live Bus</h4>
+                    <h5>Check for Available buses for today. </h5>
+                 </div>
+              </div>
+           </label>
+           <!-- /.radio-card -->
+        </div>
+        <!-- /.grid-wrapper -->
+     </div>
+     <!-- /.container -->
+
+
+
+
+
+     <!-- -------------------route result container------------------------ -->
+
+     <div id="bus-result-container">
+        <div id="result-box">
+            
+        </div>
+     </div>
+  
+    
+
+     <footer></footer>
+</body>
+</html>
+
+<script src="../components/header-footer/header-footer.js"></script>
+<script type="module"  src="/assets/scripts/transportation.js"></script>

@@ -1,0 +1,21 @@
+@media (max-width:479px){
+    #student-achievement-content-alumni{
+        width: 90%;
+        grid-template-columns: repeat(1,1fr);
+    }   
+    #student-achievement-content-alumni .achievement-box-alumni .greeting-message-alumni{
+       font-size:1.5rem; 
+    }
+    #student-achievement-content-alumni .achievement-box-alumni .Students-name{
+        font-size: 1.2rem;
+    }
+    #student-achievement-content-alumni .achievement-box-alumni .Students-batch{
+        font-size: 0.9rem;
+    }
+    #student-achievement-content-alumni .achievement-box-alumni .Students-placed-company{
+        font-size: 1.2rem;
+    }
+    #student-achievement-content-alumni .achievement-box-alumni .Students-feedback{
+        font-size:1rem;
+    }
+}

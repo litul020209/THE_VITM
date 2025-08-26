@@ -1,0 +1,217 @@
+  body {
+    font-family: Arial, sans-serif;
+    /* margin: 20px; */
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbfc;
+  }
+  .fee-container {
+    filter: blur(2px);
+    width: 95%;
+    margin: auto;
+    background: white;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items:baseline; */
+    /* flex-wrap: wrap; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(33, 33, 33, 0.711);
+  }
+  .student-details-sec{
+    width: 30%;
+  }
+  .student-profile-pic{
+    width: 30%;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid black;
+    overflow: auto;
+  }
+  .student-profile-pic img{
+    width: 100%;
+    overflow: auto;
+  }
+
+
+  .fee-container .section {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:0 1rem;
+    /* margin-bottom: 20px; */
+  }
+  .fee-container .section div {
+    flex: 1 1 45%;
+    margin: 5px 0;
+  }
+  .fee-container .label {
+    color: #666;
+    font-size: 14px;
+  }
+ .fee-container .value {
+    font-weight: bold;
+    font-size: 16px;
+    /* margin-top: 4px; */
+    background-color: rgba(238, 235, 235, 0.945);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .table-content-sec-right{
+    width: 65%;
+  }
+  .fee-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .fee-container table th, td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .fee-container table th {
+    background-color: #f3f6f8;
+    color: #333;
+    font-weight: 600;
+  }
+  .fee-container table th.amount{
+      text-align: right;
+  }
+  .fee-container table td.amount {
+    text-align: right;
+    font-weight: bold;
+  }
+  .fee-container table .checkbox {
+    text-align: center;
+  }
+ 
+  thead .total-th th{
+      text-align: center;
+      font-weight: 900;
+  }
+  thead .total-th td{
+      text-align: right;   
+      
+  }
+  thead .total-th td{
+      background-color: #f3f6f8;
+      font-weight:900;
+  }
+
+  thead tr.due-details {
+      /* border: 1px solid black; */
+  }
+
+  #generate-amount-container{
+    
+  }
+
+  #generate-amount-container .enter-amount-sec{
+    /* width: %; */
+    margin:1.5rem auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* color: brown; */
+    text-align: center;
+  }
+  .enter-amount-sec input{
+    font-size: 1.5rem;
+    border:none;
+    border-bottom: 2px dashed brown;
+    padding: 5px;
+  }
+  .enter-amount-sec input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid brown;
+  }
+
+ .generate-pay {
+    text-align: center;
+    margin-top: 3rem;
+ }
+ .generate-pay a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    
+ }
+
+
+
+
+ /* ------------------Student search section-------------- */
+ #student-search-cont{
+  display: flex ;
+  justify-content: center;
+  margin: 2rem 0;
+ }
+ #student-search-cont input{
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  height: auto;
+ }
+ #student-search-cont button{
+  border: none;
+  background-color: brown;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+ }
+ #student-search-cont button:hover{
+  opacity: 0.8;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media (max-width:480px){
+  .fee-container{
+    width: 90%;
+  }
+
+  .fee-container{
+    flex-direction: column;
+  }
+  .student-details-sec{
+    width: 80%;
+    margin: auto;
+  }
+  .table-content-sec-right{
+    width: 95%;
+    margin: auto;
+  }
+
+  .fee-container table{
+    font-size:0.9rem ;
+  }
+ }

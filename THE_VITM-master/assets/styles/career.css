@@ -1,0 +1,107 @@
+#career-opportunity-container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+    
+}
+
+#career-opportunity-container #career-opportunity-btn button{
+     font-size: 1.5rem;
+     padding: 15px;
+     background-color:  var(--ghost-white-index);
+     z-index: 5;
+     transition: 0.3s;
+     border-radius: 5px;
+     border-bottom: none;
+}
+#career-opportunity-container #career-opportunity-btn .active{
+    background-color: var(--fade-of-primary-color);
+    color: var(--white-color-index);
+    border-bottom: none;
+}
+#career-opportunity-container #career-opportunity-btn .active:hover{
+    background-color:var(--fade-of-primary-color) ;
+}
+
+#career-opportunity-container #career-opportunity-btn button:hover{
+    background-color:#c42a2ac8;
+    color: var(--white-color-index);
+    cursor: pointer;
+}
+
+#career-opportunity-container #career-opportunity-list{
+    /* box-shadow: inset var(--primary-color-index) 0px 10px 20px; */
+    box-shadow: inset  0px 15px  10px var(--fade-of-primary-color);;
+    z-index: 4;
+    border: 1px solid var(--black-color-index);
+    padding: 2.2rem;
+    margin-top: -5px;
+    border-radius: 10px;
+    font-family: var(--font-roboto);
+}
+
+#career-opportunity-container #career-opportunity-list .recruitment-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: var(--white-color-index);
+    margin: 1.5rem auto;
+    border-radius: 15px;
+    box-shadow: inset var(--primary-color-index) -7px 0px 0px,inset var(--primary-color-index) 7px 0px 0px, 1px 1px 3px gray;
+    /* filter: grayscale();
+    opacity: 0.8; */
+}  
+#career-opportunity-list .recruitment-box .recruitment-details{
+    width: 90%;
+} 
+
+#career-opportunity-list .recruitment-box .recruitment-details .recruitment-role{
+    font-size: 1.4rem;
+    /* color:brown; */
+    font-weight: bolder;
+    margin: 1rem 0rem;
+    text-decoration: underline;
+}
+#career-opportunity-list .recruitment-box .recruitment-details>div{
+    font-size: 1.1rem;
+    margin: 0.8rem auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#career-opportunity-list .recruitment-box .recruitment-details .recruitment-prospectus-file a{
+    font-size: 1.3rem;
+    color: var(--black-color-index);
+    transition: 0.3s;
+}
+#career-opportunity-list .recruitment-box .recruitment-details .recruitment-prospectus-file a span{
+    color: brown;
+}
+#career-opportunity-list .recruitment-box .recruitment-details .recruitment-prospectus-file a:hover{
+    color: red;
+}
+
+#career-opportunity-list .recruitment-box .recruitment-apply-btn{
+    width: 30%;
+    margin: 3rem auto;
+}
+#career-opportunity-list .recruitment-box .recruitment-apply-btn a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: green;
+    color: var(--white-color-index);
+    border-radius: 150px;
+    margin: 2rem auto;
+    font-family: var(--font-roboto);
+    transition: 0.3s;
+}
+#career-opportunity-list .recruitment-box .recruitment-apply-btn a:hover{
+    background-color: transparent;
+    color: green;
+    border: 1px solid green;
+}
+
+
+
+
+

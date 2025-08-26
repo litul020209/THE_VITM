@@ -1,0 +1,158 @@
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+  }
+  header #header-container{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+  header #header-container img{
+    width: 20%;
+  }
+  
+  .payment-container {
+    display: flex;
+    /* min-height: 100vh; */
+    width: 60%;
+    margin:2rem auto;
+    box-shadow: 1px 2px 20px grey;
+  }
+  
+  .payment-container .sidebar {
+    background: #fff;
+    width: 220px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-container .sidebar .tablink {
+    padding: 15px;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sidebar .tablink:hover,
+  .sidebar .tablink.active {
+    background: #f85959a9;
+  }
+  
+  .payment-container .content {
+    flex-grow: 1;
+    padding: 30px;
+    background: #fff;
+  }
+  
+  .payment-container .merchant-info {
+    background: #eef6ff;
+    padding: 15px;
+    border: 1px solid #cce5ff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .payment-container .tabcontent {
+    display: none;
+  }
+  
+  .payment-container .tabcontent.active {
+    display: block;
+  }
+  
+  .payment-container form {
+    margin-top: 20px;
+  }
+  
+  .payment-container input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+  }
+  
+  .payment-container .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .payment-container .row input {
+    flex: 1;
+  }
+  
+  .payment-container .paybtn {
+    margin-top: 20px;
+    background: #ff2727;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .payment-container .paybtn:hover {
+    opacity: 0.8;;
+  }
+
+
+
+  #Scanner-sec{
+    width: 35%;
+    margin: auto;
+    /* display: none; */
+  }
+  #Scanner-sec img{
+    width: 100%;
+  }
+  #Scanner-sec p{
+    color: brown;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:480px){
+  header #header-container{
+    width: 90%;
+    
+  }
+
+  .payment-container{
+    width: 90%;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .payment-container .sidebar{
+    width: 100%;
+    display: inline-block
+  }
+
+  #Scanner-sec{
+    width: 70%;
+  }
+
+}
+  

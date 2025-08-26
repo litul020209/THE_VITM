@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/styles/liveMap.css">
+    <link rel="stylesheet" href="../components/styles/secondary-header.css">
+
+
+<!-- AIzaSyBusZM4-eJ7N1IKCM4UQV-Xo5dFZ_im1oE -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+
+
+  <title>Map</title>
+</head>
+<body>
+
+    <div id="loader-section-main"></div>
+
+    <div id="map-full-page-container">
+      <div id="page-heading">
+        <h2><i class="fa-solid fa-wifi"></i> &nbsp; Bus Live Map</h2>
+        
+        <a href="/pages/transportation.html"><i class="fa-solid fa-xmark"></i></a>
+        
+      </div>
+    </div>
+
+    <div id="map" ></div>
+    
+    <div id="bus-stopage-list">
+      <div class="bus-live-details">
+        <div class="details">
+          <p><b>Bus Started at</b> <span id="Bus_Start_time"></span></p>
+          <p ><b>Signal Status:</b> <span id="signal-status">offline</span> </p>
+          <a href="tel:"><i class="fa-solid fa-phone"></i>  Connect to Conductor</a>
+        </div>
+
+      </div>
+
+      <div id="stopage-container">
+        <div class="rightbox">
+          <div class="rb-container">
+            <ul class="rb">
+              <li class="rb-item" ng-repeat="itembx">
+
+                <div class="item-title">Kamapalli</div>
+                <div class="timestamp">
+                   7:00 PM
+                </div>
+      
+              </li>
+              
+              
+      
+            </ul>
+      
+          </div>
+        </div>
+      </div>
+
+    </div>
+</body>
+
+</html>
+<script type="module" src="../assets/scripts/liveMap.js" ></script>

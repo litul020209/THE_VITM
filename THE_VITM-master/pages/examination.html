@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../components/styles/header-footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination | THE VITM</title>
+    <link rel="stylesheet" href="../assets/styles/examination.css"> 
+    <link rel="stylesheet" href="../components/styles/secondary-header.css">
+    <link rel="stylesheet" href="../assets/styles/index.css">
+    <link rel="stylesheet" href="/assets/styles/Responsive/Secondary_header.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/ZSggZM6/fav-icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header></header>
+
+    <div id="secondary-header-for-all-pages">
+        <div id="secondary-header-container">
+            <img src="../assets/media/header_admissions.jpeg" alt="Examination Building">
+            <h1> <span>> </span>Examination | THE VITM</h1>
+        </div>
+    </div>
+
+    <div id="box-primary-title">
+        <h1><i class="fa-solid fa-filter"></i> &nbsp;Examination Announcements</h1>
+    </div>
+
+    <div id="examination-page-container">
+        
+        <div id="examination-announcements-sec">
+            <h2>Examination Related Announcements</h2>
+            <ul>
+                <li>
+                    Announcement 1: Details about upcoming exams.
+                    <button onclick="toggleDropdown()">View Details</button>
+                    <!-- Dropdown for exam details -->
+                    <div id="exam-dropdown" style="display: none;">
+                        <label for="exam-select">Select Exam:</label>
+                        <select id="exam-select" onchange="displayExamDetails()">
+                            <option value="">-- Choose an Exam --</option>
+                        </select>
+                        <div id="exam-details"></div>
+                    </div>
+                </li> 
+                <li>Announcement 2: Examination guidelines and instructions.<button onclick="toggleDropdown('guidelines-dropdown')">View Guidelines</button>
+                    <!-- Dropdown for guidelines -->
+                    <div id="guidelines-dropdown" style="display: none;">
+                        <ul id="guidelines-list"></ul>
+                    </div>
+                </li>
+                <li>Announcement 3: Important dates and deadlines.</li>
+                <!-- Add more announcements as needed -->
+            </ul>
+        </div>
+
+        <div id="related-links-sec">
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="../pages/syllabus.html">Course List</a></li>
+                <li><a href="../pages/result.html">Results</a></li>
+                <li><a href="../pages/examination.html">Examination Forms</a></li>
+                <li><a href="../pages/examination.html">Mid-Sem Exam</a></li>
+                <li><a href="https://www.bputonline.com/btech-cs-question-papers.html#semester">Previous Year Questions</a></li>
+                <li><a href="../index.html">Scholarship</a></li>
+            </ul>
+        </div>
+        
+    </div>
+  
+
+
+    <!-- Examination Form Section -->
+    <div id="examination-form-section">
+        <h2>Examination Form</h2>
+        <form id="exam-form">
+            <div class="form-group">
+                <label for="student-name">Full Name</label>
+                <input type="text" id="student-name" name="student-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="course">Course</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="btech">B.Tech</option>
+                    <option value="bca">BCA</option>
+                    <option value="mba">MBA</option>
+                    <option value="mtech">M.Tech</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="year">Year of Study</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <select id="semester" name="semester" required>
+                    <option value="">Select Semester</option>
+                </select>
+            </div>
+    
+            <button type="submit">Submit Form</button>
+        </form>
+    </div>
+    
+   
+    <footer></footer>
+</body>
+</html>
+
+<script src="../assets/scripts/examination.js"></script>
+<script src="../components/header-footer/header-footer.js"></script>

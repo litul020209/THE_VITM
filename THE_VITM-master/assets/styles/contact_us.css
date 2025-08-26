@@ -1,0 +1,271 @@
+
+*{
+    margin: 0;
+    padding: 0;
+  
+  }
+  html,body{
+    width: 100%;
+   background-color: #fff;
+  
+  }
+  #main-for-contact{
+    width: 100%;
+    
+  }
+  /* top back ground image set ------------------------------- */
+  
+  #main-for-contact #contact-us-head{
+  
+   background-image: url(../media/litul_image/college-front.jpeg);
+   background-size: cover;
+   background-position: center;
+   /* height: 400px; */
+   width: 100%;
+  
+  }
+  #main-for-contact #contact-us-head h3{
+    display: flex;
+    
+    text-align: center;
+    justify-content: baseline;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  /* scrol sectio --------------------------------------- */
+  
+  
+  #main-for-contact #scrol-something{
+    width: 100%;
+    background-color: rgb(160, 33, 33);
+  }
+  
+  /* page 01 ------------------------------------------- */
+  
+  
+  
+  #main-for-contact .contactus_page_01 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(247, 247, 247, 0.682);
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+  
+  /* info part -------------------------- */
+  #main-for-contact .contactus_page_01 .partfor_info{
+    height: 70%;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  #main-for-contact .contactus_page_01 .partfor_info h2{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(241, 30, 30);
+    color: aliceblue;
+  }
+  #main-for-contact .contactus_page_01 .partfor_info .box_info {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    gap:10px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #main-for-contact .contactus_page_01 .partfor_info .box_info .icon_info{
+    margin-bottom: 20px;
+    
+  }
+  .fa-location-dot{
+    
+    margin-bottom: 40px;
+  
+  }
+  
+  
+  
+  
+  
+  /* map section -------------------------------- */
+  #main-for-contact .contactus_page_01 .clg_location{
+    background-color: rgb(255, 255, 255);
+    height: 70%;
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: auto;
+    overflow: hidden;
+  
+  }
+  #main-for-contact .contactus_page_01 .clg_location h2{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(249, 21, 21);
+    color: aliceblue;
+  }
+  #main-for-contact .contactus_page_01 .clg_location .map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  /* media icon ==================== */
+  
+  #main-for-contact #media-head{
+    text-align: center;
+  }
+  
+  
+  #main-for-contact  #social-media-icon{
+    height: 8%;
+    width: 100%;
+    margin: auto;
+    /* background-color: rgb(254, 254, 255); */
+    gap: 10px;
+    margin-top:20px;
+  }
+   #icon-size{
+  /* background-color: rgb(252, 253, 253); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 30px;
+  margin-top: 50px;
+  }
+  
+  
+  /* page 02-------------------------- */
+  #main-for-contact #contact-us-page-02{
+    /* background-color: rgb(246, 244, 244); */
+    margin: auto;
+    
+  }
+
+
+
+
+
+
+
+
+
+/* --------------------------CONTACT US FORM ------------------------------------ */
+#contact-us-page-02{
+  width: 40%;
+
+}
+
+
+#contact-form-container #form-itself{
+  width:90%;
+  margin:2rem auto;
+  background-color: #fff;
+  padding:2.5rem;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset 7px 0px #e60000 , inset -7px 0px #e60000;
+} 
+
+#contact-form-container #form-itself #contact-form-heading{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e60000;
+}
+
+#contact-form-container #form-itself form{
+  display: flex;
+  flex-direction: column;
+}
+#contact-form-container #form-itself form>div{
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+#contact-form-container #form-itself form>div label{
+  font-size: 1.1rem;
+  font-weight:550;
+}
+
+
+#contact-form-container #form-itself form>div {
+  margin: 5px 0px;
+}
+
+#contact-form-container #form-itself form>div input,select, button, textarea{
+  font-size: 1.1rem;
+  padding: 7px;
+  margin: 7px 0px;
+  /* border-radius: 5px; */
+}
+
+#contact-form-container #form-itself form>div button{
+  background-color: #e60000;
+  color: #ffff;
+  font-weight: bold;
+  border:none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+#contact-form-container #form-itself form>div button:hover{
+  background-color: #930101;
+  cursor: pointer;
+}
+
+#contact-form-container #form-itself form>div>section{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+#contact-form-container #form-itself form>div>section .otp-verify-sec{
+  display: flex;
+  justify-content: space-between;
+}
+#contact-form-container #form-itself form>div>section .otp-verify-sec input{
+  width: 70%;
+}
+#contact-form-container #form-itself form>div>section .otp-verify-sec button{
+  width: 25%;
+}
+
+#contact-form-container #form-itself form>div .display-off{
+  visibility: hidden;
+  position:absolute ;
+} 
+
+
+#contact-form-submit-btn{
+  background-color:green;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: 1rem 0rem;
+  font-weight:bold ;
+
+}
+#contact-form-submit-btn:hover{
+  background-color:rgba(3, 108, 3, 0.989);
+  cursor: pointer;
+}
+
+
+  
+
+
+  

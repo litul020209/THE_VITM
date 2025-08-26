@@ -1,0 +1,31 @@
+@media (max-width:479px) {
+  
+    #admission-Details-main-sec{
+       
+        flex-direction: column;
+         width: 90%;   
+    } 
+    #admission-Details-main-sec #admission-course-sec{
+          width: 100%;
+    } 
+    #admission-course-sec #admission-course-list-container{
+        grid-template-columns: repeat(1, 1fr); 
+        gap:2rem;
+    }
+    #admission-notice-sec{
+        width:100%;
+    }
+    #admission-course-list-container .course-box h3{
+        font-size: 1rem;
+    }
+    #admission-course-list-container .course-box p{
+       font-size: 1rem;
+    }
+    #admission-course-list-container .course-box .course-box-btn a{
+        font-size:0.8rem;
+    }
+    #admission-notice-container #admission-notice-heading{
+        font-size: 1rem;
+    }
+    
+}

@@ -1,0 +1,24 @@
+@media (max-width:479px){
+    #syllabus-hole-page-contanier{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    } 
+    #syllabus-filter-selection-sec{
+       width: 90%;
+       height: 65vh;
+    } 
+    #syllabus-filter-selection-sec h2{
+        font-size: 1rem;
+    }
+    #syllabus-filter-selection-sec .selection-box label{
+        font-size: 1rem;
+    }
+    #syllabus-filter-selection-sec .selection-box select{
+        font-size: 1rem;
+    }
+    #syllabus-listed-sec{
+        width: 90%;
+       margin-bottom: 10px;
+    }
+}

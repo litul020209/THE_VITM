@@ -1,0 +1,5 @@
+@media (max-width:479px) {
+    #lab-content .row_01{
+        gap: 5px;
+    }
+}

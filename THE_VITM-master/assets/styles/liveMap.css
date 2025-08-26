@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+body {
+    background: #232931;
+    font-family: "PT Sans", sans-serif;
+}
+
+#map-full-page-container {
+    width: 100%;
+    /* height: 7vh; */
+    /* height: 10dvh; */
+    background-color: black;
+}
+
+#map-full-page-container #page-heading {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: #fff;
+}
+#map-full-page-container #page-heading a{
+    text-decoration: none;
+    color: #fff;
+}
+#map-full-page-container #page-heading i {
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+#map-full-page-container #page-heading i:hover {
+    color: red;
+    cursor: pointer;
+    border-radius: 50%;
+    /* padding: 10px; */
+}
+
+
+
+/* --------------------------map itself---------------- */
+
+#map {
+    width: 100%;
+    height: 60vh;
+    /* height:50dvh; */
+
+
+
+
+}
+
+/* --------------------------Route Stopage list viewer------------- */
+
+
+
+
+#bus-stopage-list {
+    background: #232931;
+    /* height: 30vh; */
+    height: 40%;
+    /* margin: auto; */
+    padding: 2rem auto;
+    overflow-x: scroll;
+    position:sticky;
+    bottom: 0px;
+    /* margin-top: 10%; */
+    box-shadow: 2px 5px 20px rgba(119, 119, 119, 0.5);
+    z-index: 2000;
+}
+
+
+
+.rb-container {
+    font-family: "PT Sans", sans-serif;
+    width: 90%;
+    margin:3rem auto;
+    /* display: block; */
+    position: relative;
+
+}
+
+
+.rb-container ul.rb {
+    width: max-content;
+    margin-top: 2.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: baseline;
+
+}
+
+.rb-container ul.rb li {
+    width: 20rem;
+    list-style: none;
+  
+    min-height: 50px;
+    border-left: 1px solid #fff;
+    padding: 0 0 50px 30px;
+    position: relative;
+
+
+}
+
+.rb-container ul.rb li:last-child {
+    /* border-left: 0; */
+}
+
+.rb-container ul.rb li::before {
+    position: absolute;
+    left: -18px;
+    top: -5px;
+    content: " ";
+    border: 8px solid rgba(255, 255, 255, 1);
+    border-radius: 500%;
+    background: #50d890;
+    height: 20px;
+    width: 20px;
+    transition: all 500ms ease-in-out;
+    z-index: 1000;
+}
+
+.rb-container ul.rb li::after {
+    content: '';
+    /* width: 50%; */
+    border: 2px dashed white;
+    position:absolute;
+    left: 0%;
+    bottom: 0%;
+    animation: lineGrow 5s  linear forwards alternate;
+}
+
+
+@keyframes lineGrow {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+.rb-container ul.rb li:last-child::after {
+    border: 0px;
+}
+
+.rb-container ul.rb li::before {
+    /* border-color: #232931; */
+    transition: all 1000ms ease-in-out;
+    animation: fadeupease 2s  linear infinite alternate;
+}
+
+@keyframes fadeupease {
+    0%{
+        border-color: #232931;
+    }
+    100%{
+        border-color: #ffffff02;
+    }
+}
+
+
+
+ul.rb li .timestamp {
+    color: #50d890;
+    position: relative;
+    width: 100px;
+    font-size:1rem;
+}
+
+.item-title {
+    color: #fff;
+}
+
+
+
+
+
+
+#bus-stopage-list .bus-live-details .details{
+    width:80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: #fff;
+    /* background-color:black; */
+}
+
+.bus-live-details #signal-status{
+    background-color:red;
+    padding: 7px;
+    border-radius: 5px;
+    /* transition: all 1000ms ease-in-out; */
+    animation: hideshow 0.5s linear infinite alternate;
+
+}
+
+@keyframes hideshow {
+    0%{
+        background-color:red;
+    }
+    
+    100%{
+        background-color:rgba(255, 0, 0, 0.147);
+    }
+}
+
+
+.bus-live-details .details a{
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+    background-color: rgb(1, 149, 18);
+    padding: 10px;
+    border-radius: 5px;
+}
+.bus-live-details .details a:hover{
+    opacity: 0.8;
+}
+.bus-live-details .details a i{
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------mobile View-------------------- */
+@media (max-width:479px){
+    #bus-stopage-list{
+        overflow-y: scroll;
+        position: fixed;
+    }
+    #bus-stopage-list .rb-container ul{
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .rb-container ul.rb li::after{
+        top: 3%;
+    }
+    @keyframes lineGrow {
+        0%{
+            height: 0%;
+        }
+        100%{
+            height: 100%;
+        }
+    }
+
+    .rb-container ul.rb li:last-child {
+        border-left: 0;
+    }
+
+
+    #bus-stopage-list .bus-live-details .details{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .bus-live-details .details a{
+        margin: 1rem auto;
+    }
+}
+

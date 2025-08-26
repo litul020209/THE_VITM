@@ -1,0 +1,18 @@
+@media(max-width:479px) {
+    #secondary-header-for-all-pages{
+        width: 100%;
+       height: 30%;
+    } 
+    #secondary-header-for-all-pages #secondary-header-container {
+        width: 100%;
+    }
+    #secondary-header-for-all-pages #secondary-header-container img{
+        width:100%;
+      height: 100%;
+
+    }
+    #secondary-header-for-all-pages #secondary-header-container h1{
+        font-size: 1.7rem;
+        top: 30%;
+    }
+}

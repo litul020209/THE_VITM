@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../components/styles/header-footer.css">
+    <link rel="stylesheet" href="../components/styles/secondary-header.css">
+    <link rel="stylesheet" href="./application.css">
+    <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+
+    <title>Application Form | Careers</title>
+</head>
+<body $font-size-base:2rem>
+
+    <header></header>
+
+    <div id="loader-section-main"></div>
+
+
+    <div id="career-application-container">
+        <form accept-charset="UTF-8" action="" method="POST" enctype="multipart/form-data" target="_blank">
+            <h2>Job</h2>
+
+            <div class="form-group">
+                <label for="choose-post-name">Application For</label>
+                <select class="form-control" name="choose-post-name" id="choose_post_name" required>
+                    <option selected>Select</option>
+                    
+                  </select>
+            </div>
+
+
+            <h2>Personal data</h2>
+            <div class="form-group">
+              <label for="exampleInputName">Full Name</label>
+              <input type="text" name="fullname" class="form-control" id="exampleInputName" placeholder="Enter your name and surname" required="required">
+            </div>
+            <div class="form-group">
+                <label for="dob-input" class="col-3 col-form-label">Date Of Birth</label>
+                <div class="col-10">
+                  <input class="form-control" name="dob_input" type="date" value="2000-01-01" id="dob-input">
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="email" required="required">Email address</label>
+              <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+              <label for="mobile-number" required="required">Mobile Number</label>
+              <input type="tel" name="mobile_number" class="form-control" id="InputMobile"  placeholder="Enter your Mobile Number">
+            </div>
+            <div class="form-group">
+              <label for="aadhar-number" required="required">Enter Aadhar id </label>
+              <input type="number" name="aadhar_number" class="form-control" id="aadhaar-number"  placeholder="Enter Aadhar ID Number">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Present Address</label>
+              <textarea name="inputAddress" id="inputAddress" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="employeement-status">Employeemnt Status</label>
+                <select class="form-control" name="employeement_status" required>
+                    <option selected>Select</option>
+                    <option>Fresher</option>
+                    <option>Experienced</option>
+                  </select>
+            </div>
+            
+            <h2>Upload File </h2>
+
+            <div class="form-group mt-3">
+              <label class="mr-4">Upload Resume:</label>
+              <input type="file" name="file" id="upload-resume-input" class="form-control" accept=".pdf" >
+              <p> Allowed File type:.pdf , Maximum Size of resume 5MB</p>
+            </div>
+            <button type="button" id="career-form-submit-btn" class="btn btn-danger ">Submit</button>
+          </form>
+    </div>
+
+
+    <footer></footer>
+    
+</body>
+</html>
+
+
+<script src="../components/header-footer/header-footer.js"></script>
+
+
+<script type="module">
+    import { career_opportunity_list } from "../../components/Local JSON/career_opportunity_list.js";  
+    import { start_loader_1,start_loader_2,close_loader } from "../../components/loader/loader.js";
+    import { alert_popup } from "../../components/popup/alert_popup.js";
+    import { submit_career_application } from "../../db/career_Application/submit_career_application.js";
+
+
+    
+    // ----------------get date formate in yyyy-mm-dd--------------------------------
+    function getYMD(date){
+        let formattedDate;
+        if (typeof date=="string" &&  date.split('-')[0].length){
+          formattedDate=new Date(date.split("-").reverse().join("-"));
+        }
+        else{
+            formattedDate = new Date(date.toISOString().split('T')[0]);
+        }
+
+        return formattedDate;
+    }
+
+
+    // -----------------------filltering data-----------------------
+    let data= career_opportunity_list.filter((ele)=>{
+        let startdate=getYMD(ele.job_application_start).getTime();
+        let enddate=getYMD(ele.job_application_ends).getTime();
+        
+        let today = new Date();
+        let today_date= getYMD(today).getTime();
+
+
+        return today_date >= startdate && today <=enddate;
+        
+    })
+
+
+    // -------------------Auto appending data on seclect input------------
+    data.map((ele)=>{
+      let option=document.createElement("option");
+      option.innerText=ele. job_roll;
+      option.value=ele.job_roll;
+
+      document.getElementById("choose_post_name").append(option);
+    })
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const role = urlParams.get('role');
+    if(role!=""){
+      document.getElementById("choose_post_name").value=role;
+
+    }
+
+
+    
+    // -----------------------Uploading Documents-----------------------------------
+    let resume_uploaded=false;
+    let resume_file_id='';
+
+
+    let resume_upload_API="https://script.google.com/macros/s/AKfycbwcMjCECRntkYGqLmLpQYmvSl01Ssz2zfYGVwxUUHkz1npFlFGM0OezTfVr3W0UPnkp/exec";
+
+
+    document.getElementById("upload-resume-input").addEventListener("change",()=>{
+      let resume_input=document.getElementById("upload-resume-input");
+      let file=resume_input.files[0];
+      if(file.size<=1048576){
+        start_loader_2();
+        let reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.addEventListener("load",function(){
+        
+            let rawLog=reader.result.split(",")[1];
+            let dataSend={
+                dataReq:{
+                    data:rawLog,
+                    name:file.name,
+                    type:file.type
+                },
+                fname:"uploadFilesToGoogleDrive"
+            }
+
+            fetch(resume_upload_API,
+            {
+                method: "POST",
+                body: JSON.stringify(dataSend)
+            }) //send to Api
+            .then(res => res.json()).then((a) => {
+               resume_file_id=a.id;
+               resume_uploaded=true;
+              alert_popup("success","Resume Uploaded Successfully");
+              close_loader();
+
+            })
+            .catch(e => console.log(e)) // Or Error in console
+        })
+        
+        
+
+      }else{
+        alert_popup("danger", "Max limit is 5MB");
+        resume_input.value=null;
+      }
+      
+    })
+
+
+
+
+
+
+
+
+    // --------------------------Submiting form--------------------------------
+
+
+    document.getElementById("career-form-submit-btn").addEventListener("click",()=>{
+      let form = document.querySelector("#career-application-container form");
+
+      let job_post_name=form.choose_post_name.value;
+      let name=form.fullname.value;
+      let dob=form.dob_input.value;
+      let email=form.email.value;
+      let mobile=form.mobile_number.value;
+      let aadhar=form.aadhar_number.value;
+      let address=form.inputAddress.value;
+      let employeement_status=form.employeement_status.value;
+
+      const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if(job_post_name!="" && name!="" && dob!="" && mobile!="" && email.match(emailPattern) && aadhar!=""&& address!="" && employeement_status!=""){
+          if(resume_uploaded){
+              let input_data={
+                  "job_post_name":job_post_name,
+                  "name":name,
+                  "dob":dob,
+                  "mobile":mobile,
+                  "email":email,
+                  "aadhar":aadhar,
+                  "address":address,
+                  "employeement_status":employeement_status,
+                  "resume_file_id":resume_file_id,
+                  
+              }
+              
+              start_loader_2();
+              
+              if(submit_career_application(input_data) ){
+                  alert_popup("success","Enquiry Submitted, Will get you soon.")
+                  close_loader();
+                  form.reset();
+              }
+              else{
+                  close_loader();
+              }
+              
+
+
+          }
+          else{
+              alert_popup("danger","Resume Not Uploaded");
+          }
+      }
+      else{
+          alert_popup("danger", "Invalid Inputs or Input Missing")
+      }
+
+
+    })
+
+
+
+</script>
+
+
+
+
+
+

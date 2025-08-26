@@ -1,0 +1,266 @@
+:root {
+    --primary-color-index: #e60000;
+    --black-color-index: black;
+    --white-color-index: white;
+    --ghost-white-index: ghostWhite;
+    --secondary-color-index: #333333;
+    --accent-color: #007bff;
+    --text-color-light: #f5f5f5;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* #main-content {
+    font-family: var(--font-body);
+    color: var(--secondary-color-index);
+    background-color: var(--ghost-white-index);
+  }
+   */
+   
+  #about-us-header {
+    position: relative;
+    text-align: center;
+    background-color: var(--primary-color-index);
+    color: var(--white-color-index);
+  }
+  #about-us-header>h1{
+    color: var(--white-color-index);
+    /* text-align: center; */
+  }
+  
+  .background-image img {
+    width: 100%;
+    height: 350px;
+    object-fit:fill;
+    filter: brightness(0.5);
+  }
+
+  #about-us .background-image{
+    position: relative;
+  }
+  #about-us .background-image h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 1px 2px var(--ghost-white-index);
+  }
+  
+ #about-peropery-section-container .about-section-under-main {
+    padding: 40px 20px;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 20px 0px;
+    background-color: var(--ghost-white-index);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #about-peropery-section-container .about-section-under-main  h1, h2 {
+    color: var(--primary-color-index);
+    font-family: var(--font-heading);
+    margin-bottom: 15px;
+  }
+  
+  #about-peropery-section-container .about-section-under-main h1 {
+    font-size: 36px;
+  }
+
+  #about-peropery-section-container .about-section-under-main h2 {
+    font-size: 28px;
+  }
+  
+  #about-peropery-section-container .about-section-under-main  p, ul {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--secondary-color-index);
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  #about-us-header .header-button {
+    background-color: var(--primary-color-index);
+    color: var(--white-color-index);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #about-us-header .header-button:hover {
+    background-color: #cc0000;
+  }
+  
+  #course-details {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--white-color-index);
+    border-left: 4px solid var(--primary-color-index);
+    border-radius: 5px;
+  }
+  
+  .course-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .course-list li {
+    font-size: 18px;
+    margin: 8px 0;
+    color: var(--primary-color-index);
+  }
+
+  .vision, .mission, .why-choose-us {
+    background-color: var(--white-color-index);
+  }
+  
+  .why-choose-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .why-choose-us h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .principal-section {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .principal-section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .principal-section p {
+    font-size: 18px;
+    color: var(--secondary-color-index);
+    line-height: 1.8;
+  }
+  
+  .principal-section p span {
+    display: block;
+    font-weight: bold;
+    color: var(--primary-color-index);
+    margin-top: 10px;
+  }
+  
+  
+    .background-image img {
+      height: 250px;
+    }
+  
+    .logo img {
+      width: 120px;
+    }
+  
+    section {
+      padding: 30px 15px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+     button {
+      font-size: 16px;
+      padding: 10px 18px;
+    }
+  
+    .principal-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .principal-section img {
+      margin-bottom: 20px;
+    }
+
+/* --------------------------Contact US Section---------------------------------- */
+#contact-us-sec{
+    background-color: var(--white-color-index);
+    padding: 10px;
+    margin-bottom: 5vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#contact-us-sec #contact-us-sec-container{
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contact-us-sec-container #contact-us-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact-us-sec-container #contact-us-content #contact-details p{
+    font-size: 1.3rem;
+    margin: 1rem 0rem;
+}
+
+#contact-us-sec-container #contact-us-content #contact-details .contact-address{
+    font-size: 1.5rem;
+    font-family: var(--font-poppins);
+}
+#contact-us-sec-container #contact-us-content #contact-details .contact-address span{
+    color: var(--primary-color-index);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#contact-us-sec-container #contact-us-content #contact-details .contact-phone span{
+    color: #0000e6;
+}
+#contact-us-sec-container #contact-us-content #contact-details .contact-email span{
+    color: brown;
+}
+
+
+#contact-us-sec-container #contact-us-content #contact-details #contact-form-btn{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--white-color-index);
+    border-radius: 5px;
+    margin: 2rem 0rem;
+    display: inline-block;
+    background-color: var(--primary-color-index);
+    padding: 15px;
+    transition: 0.2s;
+}
+
+#contact-us-sec-container #contact-us-content #contact-details #contact-form-btn:hover{
+    background-color: transparent;
+    color: var(--primary-color-index);
+    border: 1px solid var(--primary-color-index);
+}

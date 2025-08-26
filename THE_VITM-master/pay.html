@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://i.ibb.co/ZSggZM6/fav-icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/components/styles/secondary-header.css">
+  <script src="https://kit.fontawesome.com/f118dac063.js" crossorigin="anonymous"></script>
+  <title>Pay | THE VITM</title>
+  <link rel="stylesheet" href="/assets/styles/pay.css">
+</head>
+<body>
+    
+    <div id="loader-section-main"></div>
+
+
+<header>
+    <div id="header-container">
+        <img src="/assets/media/Logo-main-light.png" alt="">
+        <h2> :THE VITM Online Payment Interface</h2>
+    </div>
+</header>
+
+<div class="payment-container">
+  <div class="sidebar">
+    <button class="tablink upi-tab" >Pay via UPI</button>
+    <button class="tablink verify-tab" >Verify Payment</button>
+  </div>
+
+  <div class="content">
+    <div class="merchant-info">
+      <p><strong>Merchant Name:</strong> THE VITM</p>
+      <p><strong>Payment Amount:</strong> ₹ <span class="amount-field"></span></p>
+    </div>
+
+   
+
+    
+
+    <div id="upi" class="tabcontent">
+      <h3>Pay by UPI Scanner</h3>
+        <!-- <div id="Scanner-sec">
+            <img src="/assets/media/principal.jpg" alt="">
+            <p>  - After Successful payment click on Verify payment Button and Ensure Transaction Id</p>
+            <button class="paybtn" >Verify Payment</button>
+        </div> -->
+
+      <form>
+        <button class="paybtn" id="generateQR-btn"><i class="fa-solid fa-qrcode"></i> Generate QR</button>
+      </form>
+    </div>
+
+    <div id="verify-payment" class="tabcontent">
+      <h3>Verify previous payment</h3>
+      <form>
+        <input type="text" placeholder="Enter UPI Transaction ID" required><br>
+        <button class="paybtn verify-tab">Verify</button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="/assets/scripts/pay.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@media (max-width:479px){
+    #about-peropery-section-container{
+        width: 90%;
+        margin-left:17px;
+    }
+    #about-peropery-section-container .about-section-under-main  p, ul{
+        font-size:0.95rem;
+        
+    } 
+    #about-peropery-section-container .about-section-under-main  h1, h2 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+   #about-peropery-section-container #student-image img{
+       width:100%;
+        height:200px;
+        object-fit:cover;
+        
+    }
+
+    #contact-us-sec-container #contact-us-content{
+        width: 90%;
+        flex-direction: column;
+    }
+    #contact-us-sec-container #contact-us-content #contact-details {
+        margin-left: 30px;
+    }
+    #contact-map-embed{
+        width:100%;
+     
+    }
+    #contact-map-embed iframe{
+       
+        width: 350px;
+        height: 300px;
+    }
+    #contact-us-sec-container #contact-us-content #contact-details p{
+        font-size: 0.98rem;
+    }
+} 

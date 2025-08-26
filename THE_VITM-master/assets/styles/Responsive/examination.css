@@ -1,0 +1,11 @@
+@media (max-width:479px) {
+    #examination-page-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    #examination-announcements-sec,
+    #related-links-sec {
+        width: 100%;
+    }
+}

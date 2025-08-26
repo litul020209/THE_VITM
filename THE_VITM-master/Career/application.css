@@ -1,0 +1,42 @@
+
+html { font-size: 100%; }
+
+header{
+    position: relative;
+}
+#career-application-container{
+    width: 60%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: ghostwhite;
+    margin: 1rem auto;
+    box-shadow: inset 0px 5px #e60000,inset 0px -5px #e60000,1px 1px 10px rgba(128, 128, 128, 0.685) ;
+}
+#career-application-container form{
+    width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+#career-application-container form>h2{
+    font-size:1.5rem;
+    font-weight: bolder;
+    color: #e60000;
+}
+.form-group #upload-resume{
+    margin: 0px;
+    color: #e60000;
+    background-color: #fff;
+    
+}
+
+
+
+@media (max-width:480px){
+    #career-application-container{
+        width:95%;
+    }
+    #career-application-container form{
+        width: 95%;
+    }
+}

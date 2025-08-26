@@ -1,0 +1,11 @@
+@media (max-width:479px) {
+    #announcement-box-main{
+        width: 90%;
+    } 
+    #announcement-box-main #announcement-content-main section>div p{
+       font-size: 10px;
+    }
+    #announcement-box-main #announcement-content-main section>div a{
+       font-size: 1rem; 
+    }
+}
